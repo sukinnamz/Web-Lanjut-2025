@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//Mengimpor facade Route untuk mendefinisikan rute di Laravel.
 use App\Http\Controllers\ItemController;
+//Mengimpor ItemController, yang digunakan untuk menangani permintaan terkait item.
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,5 +18,7 @@ use App\Http\Controllers\ItemController;
 Route::get('/', function () {
     return view('welcome');
 });
+//Menyediakan rute GET untuk URL / yang akan menampilkan tampilan (view) welcome.blade.php.
 
 Route::resource('items', ItemController::class);
+//Secara otomatis membuat semua rute CRUD untuk items dengan menggunakan ItemController.
