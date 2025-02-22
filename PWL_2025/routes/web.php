@@ -71,7 +71,13 @@ Route::resource('photos', PhotoController::class)->except([
 //     return view('hello', ['name' => 'Andi']);
 // }); // memasukkan data dengan variabel andi ke dalam html
 
-Route::get('/greeting', function () {
-    return view('blog.hello', ['name' => 'Andi']);
-}); // a kita bisa menggunakan “dot”
-// notation untuk mereferensikan direktori
+// Route::get('/greeting', function () {
+//     return view('blog.hello', ['name' => 'Andi']);
+// }); // a kita bisa menggunakan “dot”
+// // notation untuk mereferensikan direktori
+
+Route::get('/greeting', [
+    WelcomeCOntroller::class,
+    'greeting'
+]); // menampilkan view melalui controller (Routing akan memanggil Controller
+//terlebih dahulu, dan Controller akan me-return view yang dimaksud.)
