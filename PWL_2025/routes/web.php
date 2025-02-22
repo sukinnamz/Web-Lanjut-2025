@@ -36,3 +36,9 @@ Route::get('/user/{name}', function ($name) {
 Route::get('/articles/{id}', function ($id) {
     return 'Halaman artikel dengan ID ' . $id;
 });
+
+Route::get('/user/{name?}', function ($name = 'John') {
+    return 'Nama saya ' . $name;
+}); // Optional parameter menambahkan satu nilai default jika parameter tidak diisi,
+// sehingga jika membuka halaman tanpa parameter akan menampilkan nilai default yang telah ditetapkan
+// namun jika parameter diisi, yang ditampilkan adalah parameter yang telah diisi (bukan nilai default)
