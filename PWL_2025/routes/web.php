@@ -66,3 +66,8 @@ Route::resource('photos', PhotoController::class)->except([
     'update',
     'destroy'
 ]); //mengubah route pada photo
+
+Route::get('/greeting', function () {
+    return view('hello', ['name' => 'Andi']);
+}); // memasukkan data dengan variabel andi ke dalam html
+
