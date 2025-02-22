@@ -6,6 +6,7 @@ use App\Http\Controllers\WelcomeCOntroller;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PhotoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +53,16 @@ Route::get('/user/{name?}', function ($name = 'John') {
 }); // Optional parameter menambahkan satu nilai default jika parameter tidak diisi,
 // sehingga jika membuka halaman tanpa parameter akan menampilkan nilai default yang telah ditetapkan
 // namun jika parameter diisi, yang ditampilkan adalah parameter yang telah diisi (bukan nilai default)
+
+Route::resource('photos', PhotoController::class); //menggenerate fungsi crud di Photo controller
+
+Route::resource('photos', PhotoController::class)->only([
+    'index',
+    'show'
+]);
+Route::resource('photos', PhotoController::class)->except([
+    'create',
+    'store',
+    'update',
+    'destroy'
+]); //mengubah route pada photo
