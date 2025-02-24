@@ -35,3 +35,5 @@ Route::get('/penjualan', [PenjualanController::class, 'index']);
 Route::get('/level', [LevelController::class, 'index']);
 
 Route::get('/kategori', [KategoriController::class, 'index']);
+
+Route::get('/user', [UserController::class, 'index']);
