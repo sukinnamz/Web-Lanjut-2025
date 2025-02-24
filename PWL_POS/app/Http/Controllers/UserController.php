@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function show($id, $name)
     {
-        return view('user', compact('id', 'name'));
+        return view('user2', compact('id', 'name'));
     }
 
     public function index()
