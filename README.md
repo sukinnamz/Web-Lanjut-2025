@@ -1,5 +1,9 @@
 # Daftar Pertanyaan Praktikum
 
+Nama    : Innama Maesa Putri
+Kelas   : TI 2A
+Absen   : 13
+
 # Jobsheet 2
 
 ## Pertanyaan Jobsheet 2
