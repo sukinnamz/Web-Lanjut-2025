@@ -44,3 +44,14 @@ Namun, jika data tidak ditemukan maka akan menyiapkan data baru seperti ini, <br
 <img src="Image/p24-4.jpg"> <br>
 Dapat dilihat pada ID yang masih kosong, data tersebut belum tersimpan, jika ingin menyimpan dapat memanggil fungsi ```save()``` seperti dibawah,
 <img src="Image/p24-5.jpg"> <br>
+
+## Praktikum 2.5
+Eloquent menyediakan metode isDirty, isClean, dan wasChanged untuk memeriksa keadaan internal model dan menentukan bagaimana atributnya berubah sejak model pertama kali diambil.
+Metode isDirty menentukan apakah ada atribut model yang telah diubah sejak model diambil. Anda dapat meneruskan nama atribut tertentu atau serangkaian atribut ke metode isDirty untuk menentukan apakah ada atribut yang "kotor". Metode ini isClean akan menentukan apakah suatu atribut tetap tidak berubah sejak model diambil. <br>
+<img src="Image/p25-1.jpg"> <br>
+Program menampilkan hasil return isDirty yang terakhir. <br>
+Metode ini wasChanged menentukan apakah ada atribut yang diubah saat model terakhir disimpan dalam siklus permintaan saat ini. <br>
+<img src="Image/p25-2.jpg"> <br>
+Jika tidak ada fungsi ```dd()``` maka akan menampilkan data yang barusan ditambah atau isi dari array ```$user```. <br>
+<img src="Image/p25-3.jpg"> <br>
+Menambahkan fungsi ```dd()``` untuk menampilkan hasil return ```isDirty()```
