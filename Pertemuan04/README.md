@@ -55,3 +55,17 @@ Metode ini wasChanged menentukan apakah ada atribut yang diubah saat model terak
 Jika tidak ada fungsi ```dd()``` maka akan menampilkan data yang barusan ditambah atau isi dari array ```$user```. <br>
 <img src="Image/p25-3.jpg"> <br>
 Menambahkan fungsi ```dd()``` untuk menampilkan hasil return ```isDirty()```
+
+## Praktikum 2.6
+Seperti yang telah kita ketahui, CRUD merupakan singkatan dari Create, Read, Update dan Delete. CRUD merupakan istilah untuk proses pengolahan data pada database, seperti input data ke database, menampilkan data dari database, mengedit data pada database dan menghapus data dari database.<br>
+- Menampilkan data : <br>
+<img src="Image/p26-1.jpg"> <br>
+- Menambah data : <br>
+<img src="Image/p26-2.jpg"> <br>
+<img src="Image/p26-3.jpg"> <br>
+<img src="Image/p26-4.jpg"> <br>
+- Mengubah data : <br>
+<img src="Image/p26-5.jpg"> <br>
+<img src="Image/p26-6.jpg"> <br>
+- Menghapus data : <br>
+<img src="Image/p26-7.jpg"> <br>
