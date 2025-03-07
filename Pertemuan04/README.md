@@ -69,3 +69,8 @@ Seperti yang telah kita ketahui, CRUD merupakan singkatan dari Create, Read, Upd
 <img src="Image/p26-6.jpg"> <br>
 - Menghapus data : <br>
 <img src="Image/p26-7.jpg"> <br>
+
+## Praktikum 2.7
+<b>One to Many (Inverse) / Belongs To</b><br>
+Hubungan satu-ke-banyak digunakan untuk mendefinisikan hubungan di mana satu model adalah induk dari satu atau lebih model turunan. Misalnya, 1 kategori mungkin memiliki jumlah barang yang tidak terbatas. <br>
+<img src="Image/p27-1.jpg"> <br>
