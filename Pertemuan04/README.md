@@ -24,3 +24,9 @@ Hasil jika model ditemukan : <br>
 <img src="Image/p22-1.jpg"> <br>
 Jika model tidak ditemukan maka akan mengembalikan halaman 404 not found seperti berikut, <br>
 <img src="Image/p22-2.jpg"> <br>
+
+## Praktikum 2.3
+Saat berinteraksi dengan model Eloquent, juga dapat menggunakan metode agregat ```count, sum, max,``` dan lainnya yang disediakan oleh pembuat kueri Laravel. Pada praktikum ini dilakukan count pada baris yang memiliki level_id = 2, awalnya hasil tidak dapat ditampilkan seperti berikut, 
+<img src="Image/p23-1.jpg"> <br>
+Namun setelah beberapa modifikasi pada controller dan view hasilnya seperti berikut <br>
+<img src="Image/p23-2.jpg"> <br>
