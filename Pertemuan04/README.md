@@ -30,3 +30,17 @@ Saat berinteraksi dengan model Eloquent, juga dapat menggunakan metode agregat `
 <img src="Image/p23-1.jpg"> <br>
 Namun setelah beberapa modifikasi pada controller dan view hasilnya seperti berikut <br>
 <img src="Image/p23-2.jpg"> <br>
+
+## Praktikum 2.4
+<b>Metode firstOrCreate</b> merupakan metode untuk melakukan retrieving data(mengambil data) berdasarkan nilai yang ingin dicari, jika data tidak ditemukan maka method ini akan melakukan insert ke table datadase tersebut sesuai dengan nilai yang dimasukkan.<br>
+Jika data ditemukan maka akan menampilkan data seperti berikut, <br>
+<img src="Image/p24-1.jpg"> <br>
+Namun, jika data tidak ditemukan maka akan membuat data baru seperti ini, <br>
+<img src="Image/p24-2.jpg"> <br>
+<b>Metode firstOrNew</b>, seperti firstOrCreate, akan mencoba menemukan/mengambil record/data dalam database yang cocok dengan atribut yang diberikan. Namun, jika data tidak ditemukan, data akan disiapkan untuk di-insert-kan ke database dan model baru akan dikembalikan. <br>
+Jika data ditemukan maka akan menampilkan data seperti berikut, <br>
+<img src="Image/p24-1.jpg"> <br>
+Namun, jika data tidak ditemukan maka akan menyiapkan data baru seperti ini, <br>
+<img src="Image/p24-4.jpg"> <br>
+Dapat dilihat pada ID yang masih kosong, data tersebut belum tersimpan, jika ingin menyimpan dapat memanggil fungsi ```save()``` seperti dibawah,
+<img src="Image/p24-5.jpg"> <br>
