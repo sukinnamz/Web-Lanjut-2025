@@ -17,3 +17,10 @@ Terkadang mungkin terdapat suatu kondisi untuk melakukan beberapa tindakan lain 
 <img src="Image/p21 - 2.jpg"> <br>
 Maka halaman web akan menampilkan kolom pada sintaks findOr saja dan kolom lain akan dikosongkan. Namun jika findOr diisi parameter baris database yang belum dibuat maka akan menampilkan halaman 404 not found seperti berikut, <br>
 <img src="Image/p21 - 3.jpg"> <br>
+
+## Praktikum 2.2
+Jika ingin memberikan pengecualian jika model tidak ditemukan. Hal ini sangat berguna dalam rute atau pengontrol. Metode findOrFail and firstOrFail akan mengambil hasil pertama dari kueri; namun, jika tidak ada hasil yang ditemukan, sebuah Illuminate\Database\Eloquent\ModelNotFoundException akan dilempar. <br>
+Hasil jika model ditemukan : <br>
+<img src="Image/p22-1.jpg"> <br>
+Jika model tidak ditemukan maka akan mengembalikan halaman 404 not found seperti berikut, <br>
+<img src="Image/p22-2.jpg"> <br>
