@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\KategoriModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\DataTables\KategoriDataTable;
 
 class KategoriController extends Controller
 {
-    public function index()
+    public function index(KategoriDataTable $dataTable)
     {
         // $data = [
         //     'kategori_kode' => 'SNK',
@@ -30,7 +32,54 @@ class KategoriController extends Controller
 
         // return 'Delete data berhasil. Jumlah data yang dihapus: ' . $row . ' baris';
 
-        $data = DB::table('m_kategori')->get();
-        return view('kategori', ['data' => $data]);
+        // $data = DB::table('m_kategori')->get();
+        // return view('kategori', ['data' => $data]);
+
+        return $dataTable->render('kategori.index');
     }
+
+    public function create()
+    {
+        return view('kategori.create');
+    }
+
+    public function store(Request $request)
+    {
+        KategoriModel::create([
+            'kategori_kode' => $request->kodeKategori,
+            'kategori_nama' => $request->namaKategori,
+        ]);
+        return redirect('/kategori');
+    }
+
+    public function edit($id)
+    {
+        $kategori = KategoriModel::findOrFail($id);
+        return view('kategori.edit', compact('kategori'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'kategori_kode' => 'required|string|max:10',
+            'kategori_nama' => 'required|string|max:100',
+        ]);
+
+        $kategori = KategoriModel::findOrFail($id);
+        $kategori->update([
+            'kategori_kode' => $request->kategori_kode,
+            'kategori_nama' => $request->kategori_nama,
+        ]);
+
+        return redirect('/kategori');
+    }
+    public function destroy($id)
+    {
+        $kategori = KategoriModel::findOrFail($id);
+        $kategori->delete();
+
+        return redirect('/kategori');
+    }
+
+
 }
