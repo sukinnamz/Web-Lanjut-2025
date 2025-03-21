@@ -1,6 +1,0 @@
-.main-sidebar {
-    height: 100vh !important;
-    /* Paksa sidebar agar tidak terpotong */
-    overflow-y: auto;
-    /* Tambahkan scroll jika konten terlalu panjang */
-}
