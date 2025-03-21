@@ -20,19 +20,19 @@ Melakukan hapus data menggunakan ajax, dapat dilihat pada proses ini tampilan be
 <img src="Image/p3-2.jpg"><br>
 
 ## Tugas
-- Data Level
+- Data Level<br>
 <img src="Image/t1-1.jpg"><br>
 <img src="Image/t1-2.jpg"><br>
 <img src="Image/t1-3.jpg"><br>
-- Data Kategori
+- Data Kategori<br>
 <img src="Image/t2-1.jpg"><br>
 <img src="Image/t2-2.jpg"><br>
 <img src="Image/t2-3.jpg"><br>
-- Data Supplier
+- Data Supplier<br>
 <img src="Image/t3-1.jpg"><br>
 <img src="Image/t3-2.jpg"><br>
 <img src="Image/t3-3.jpg"><br>
-- Data Barang
+- Data Barang<br>
 <img src="Image/t4-1.jpg"><br>
 <img src="Image/t4-2.jpg"><br>
 <img src="Image/t4-3.jpg"><br>
