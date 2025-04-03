@@ -54,7 +54,7 @@ Route::middleware(['auth'])->group(function () { //artinya semua route di dalam 
         Route::get('/user/{id}', [UserController::class, 'show']);
         Route::get('/user/{id}/edit', [UserController::class, 'edit']);
         Route::put('/user/{id}', [UserController::class, 'update']);
-        Route::get('/user/{id}/show_ajax', [UserController::class, 'show_ajax']);
+        Route::get('/user/{id}/show_ajax', [UserController::class, 'show']);
         Route::get('/user/{id}/edit_ajax', [UserController::class, 'edit_ajax']);
         Route::put('/user/{id}/update_ajax', [UserController::class, 'update_ajax']);
         Route::get('/user/{id}/delete_ajax', [UserController::class, 'confirm_ajax']);

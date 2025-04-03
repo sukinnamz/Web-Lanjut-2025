@@ -197,7 +197,8 @@ class UserController extends Controller
                 'level_id' => 'required|integer',
                 'username' => 'required|string|min:3|unique:m_user,username',
                 'password' => 'required|min:5',
-                'nama' => 'required|string|max:100'
+                'nama' => 'required|string|max:100',
+                'profile_picture' => 'nullable|image|max:2048'
             ];
 
             $validator = Validator::make($request->all(), $rules);
@@ -210,7 +211,17 @@ class UserController extends Controller
                 ]);
             }
 
-            UserModel::create($request->all());
+            $data = $request->all();
+            if ($request->hasFile('profile_picture')) {
+                $id = UserModel::all()->max('user_id') + 1;
+                $image = $request->file('profile_picture');
+                $imageName = 'profile-' . $id . '.webp';
+                $image->storeAs('public/profile_pictures', $imageName);
+                $data['picture_path'] = 'storage/profile_pictures/' . $imageName;
+                unset($data['profile_picture']);
+            }
+
+            UserModel::create($data);
 
             return response()->json([
                 'status' => true,
@@ -237,7 +248,8 @@ class UserController extends Controller
                 'level_id' => 'required|integer',
                 'username' => 'required|max:20|unique:m_user,username,' . $id . ',user_id',
                 'nama' => 'required|max:100',
-                'password' => 'nullable|min:6|max:20'
+                'password' => 'nullable|min:6|max:20',
+                'profile_picture' => 'nullable|image|max:2048'
             ];
 
             // use Illuminate\Support\Facades\Validator; 
@@ -257,7 +269,16 @@ class UserController extends Controller
                     $request->request->remove('password');
                 }
 
-                $check->update($request->all());
+                $data = $request->all();
+                if ($request->hasFile('profile_picture')) {
+                    $image = $request->file('profile_picture');
+                    $imageName = 'profile-' . $id . '.webp';
+                    $image->storeAs('public/profile_pictures', $imageName);
+                    $data['picture_path'] = 'storage/profile_pictures/' . $imageName;
+                    unset($data['profile_picture']);
+                }
+
+                $check->update($data);
                 return response()->json([
                     'status' => true,
                     'message' => 'Data berhasil diupdate'
