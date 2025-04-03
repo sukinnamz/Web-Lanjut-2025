@@ -106,6 +106,10 @@ Route::middleware(['auth'])->group(function () { //artinya semua route di dalam 
         Route::get('/kategori/{id}/delete_ajax', [KategoriController::class, 'confirm_ajax']);
         Route::delete('/kategori/{id}/delete_ajax', [KategoriController::class, 'delete_ajax']);
         Route::delete('/kategori/{id}', [KategoriController::class, 'destroy']);
+        Route::get('/kategori/import', [KategoriController::class, 'import']); // menampilkan halaman form upload excel kategori ajax
+        Route::post('/kategori/import_ajax', [KategoriController::class, 'import_ajax']); // menyimpan import excel kategori ajax
+        Route::get('/kategori/export_excel', [KategoriController::class, 'export_excel']); // menampilkan halaman form export excel kategori
+        Route::get('/kategori/export_pdf', [KategoriController::class, 'export_pdf']); // menampilkan halaman form export pdf kategori
     });
 
     Route::middleware(['authorize:ADM,MNG'])->group(function () {
