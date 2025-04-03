@@ -15,3 +15,4 @@ Repository ini berisi materi dan kode untuk mata kuliah **Web Lanjut 2025**. Set
 | 5.2 | Blade Viwe, Web Templating | [📄 README](Pertemuan05-baru/README.md) |
 | 6 | Ajax Form dan Validation | [📄 README](Pertemuan06/README.md) |
 | 7 | Authentication dan Authorization | [📄 README](Pertemuan07/README.md) |
+| 8 | Import dan Export ke PDF dan Excel | [📄 README](Pertemuan08/README.md) |
