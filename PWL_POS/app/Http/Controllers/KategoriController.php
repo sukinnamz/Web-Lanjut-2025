@@ -190,7 +190,7 @@ class KategoriController extends Controller
     {
         $kategori = KategoriModel::find($id);
 
-        return view('kategori.show_ajax', ['kategori' => $kategori]);
+        return view('kategori.show', ['kategori' => $kategori]);
     }
 
     public function edit_ajax(string $id)

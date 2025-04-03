@@ -202,7 +202,7 @@ class LevelController extends Controller
     {
         $level = LevelModel::find($id);
 
-        return view('level.show_ajax', ['level' => $level]);
+        return view('level.show', ['level' => $level]);
     }
 
     public function edit_ajax(string $id)

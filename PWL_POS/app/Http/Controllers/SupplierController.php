@@ -198,7 +198,7 @@ class SupplierController extends Controller
     {
         $supplier = SupplierModel::find($id);
 
-        return view('supplier.show_ajax', ['supplier' => $supplier]);
+        return view('supplier.show', ['supplier' => $supplier]);
     }
 
     public function edit_ajax(string $id)
