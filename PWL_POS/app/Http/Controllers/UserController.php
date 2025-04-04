@@ -187,7 +187,7 @@ class UserController extends Controller
     {
         $user = UserModel::with('level')->find($id);
 
-        return view('user.show_ajax', ['user' => $user]);
+        return view('user.show', ['user' => $user]);
     }
 
     public function store_ajax(Request $request)

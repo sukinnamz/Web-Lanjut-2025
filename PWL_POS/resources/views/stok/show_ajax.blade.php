@@ -29,5 +29,5 @@
                     <td>{{ $stok->stok_jumlah }}</td>
                 </tr>
             </table>
+        </div>
     </div>
-</div>
