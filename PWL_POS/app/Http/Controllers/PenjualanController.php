@@ -48,6 +48,7 @@ class PenjualanController extends Controller
                 $btn = '<button onclick="modalAction(\'' . url('/penjualan/' . $penjualan->penjualan_id . '/show_ajax') . '\')" class="btn btn-info btn-sm">Detail</button> ';
                 // $btn .= '<button onclick="modalAction(\'' . url('/penjualan/' . $penjualan->penjualan_id . '/edit_ajax') . '\')" class="btn btn-warning btn-sm">Edit</button> ';
                 $btn .= '<button onclick="modalAction(\'' . url('/penjualan/' . $penjualan->penjualan_id . '/delete_ajax') . '\')" class="btn btn-danger btn-sm">Hapus</button>';
+                $btn .= '<a href="' . url('/penjualan/' . $penjualan->penjualan_id . '/struk_pdf') . '" target="_blank" class="btn btn-success btn-sm">Cetak Struk</a>';
                 return $btn;
             })
             ->rawColumns(['aksi'])
@@ -266,5 +267,14 @@ class PenjualanController extends Controller
         $pdf->render();
 
         return $pdf->stream('Data Penjualan ' . date('Y-m-d H:i:s') . '.pdf');
+    }
+
+    public function struk_pdf($id)
+    {
+        $penjualan = PenjualanModel::with(['detail.barang', 'user'])->findOrFail($id);
+
+        $pdf = Pdf::loadView('penjualan.struk_pdf', compact('penjualan'));
+        $pdf->setPaper([0, 0, 226.77, 600], 'portrait'); // ukuran struk kecil
+        return $pdf->stream('Struk_Penjualan_' . $penjualan->penjualan_kode . '.pdf');
     }
 }

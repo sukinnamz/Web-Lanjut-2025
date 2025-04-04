@@ -138,7 +138,7 @@ Route::middleware(['auth'])->group(function () { //artinya semua route di dalam 
         Route::delete('/supplier/{id}', [SupplierController::class, 'destroy']);
     });
 
-    Route::middleware(['authorize:ADM,MNG'])->group(function () {
+    Route::middleware(['authorize:ADM,MNG,STF'])->group(function () {
         // Route Stok
         Route::get('/stok', [StokController::class, 'index']);
         Route::post('/stok/list', [StokController::class, 'list']);
@@ -178,6 +178,8 @@ Route::middleware(['auth'])->group(function () { //artinya semua route di dalam 
         Route::delete('/penjualan/{id}/delete_ajax', [PenjualanController::class, 'delete_ajax']);
         Route::delete('/penjualan/{id}', [PenjualanController::class, 'destroy']);
         Route::get('/penjualan/export_pdf', [PenjualanController::class, 'export_pdf']);
+        Route::get('/penjualan/{id}/struk_pdf', [PenjualanController::class, 'struk_pdf'])->name('penjualan.struk_pdf');
+
     });
 
 });
