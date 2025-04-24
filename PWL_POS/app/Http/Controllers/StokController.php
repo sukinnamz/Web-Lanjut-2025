@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Validator;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon;
 
 class StokController extends Controller
 {
@@ -48,6 +49,9 @@ class StokController extends Controller
 
         return DataTables::of($stoks)
             ->addIndexColumn()
+            ->editColumn('stok_tanggal', function ($stok) {
+                return Carbon::parse($stok->stok_tanggal)->format('d/m/Y');
+            })
             ->addColumn('aksi', function ($stok) {
                 $btn = '<button onclick="modalAction(\'' . url('/stok/' . $stok->stok_id . '/show_ajax') . '\')" class="btn btn-info btn-sm">Detail</button> ';
                 $btn .= '<button onclick="modalAction(\'' . url('/stok/' . $stok->stok_id . '/edit_ajax') . '\')" class="btn btn-warning btn-sm">Edit</button> ';
