@@ -17,3 +17,4 @@ Repository ini berisi materi dan kode untuk mata kuliah **Web Lanjut 2025**. Set
 | 7 | Authentication dan Authorization | [📄 README](Pertemuan07/README.md) |
 | 8 | Import dan Export ke PDF dan Excel | [📄 README](Pertemuan08/README.md) |
 | 10 | Restful API | [📄 README](Pertemuan10/README.md) |
+| 11 | Restful API 2 | [📄 README](Pertemuan11/README.md) |
