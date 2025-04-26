@@ -69,7 +69,11 @@ Pada praktikum kali ini, mahasiswa mempelajari penerapan lanjutan RESTful API me
 ### Penjelasan:
 Dengan menggunakan **Eloquent Accessor**, kita dapat memanipulasi tampilan data secara otomatis saat data diambil dari database. Dalam kasus ini, saat user baru didaftarkan dengan file gambar, path lengkap gambar akan ditampilkan langsung di response API, bukan hanya nama file saja.
 
----
+### Hasil :
+<p>Menyimpan path image user sebelum di hash</p>
+<img src="Image/p1-1.png"><br>
+<p>Menyimpan path image user setelah di hash</p>
+<img src="Image/p1-2.png"><br>
 
 ## Tugas
 Implementasikan fitur serupa (upload file/gambar) pada:
@@ -82,4 +86,11 @@ Langkah-langkah:
 - Update controller untuk `barang` agar mendukung upload file saat `create` dan `update`
 - Lakukan uji coba GET untuk menampilkan data dengan path gambar yang sudah terformat
 
-Selamat belajar dan bereksplorasi lebih lanjut!
+### Hasil :
+<p>Menyimpan path image barang</p>
+<img src="Image/t1.png"><br>
+<p>Melakukan transaksi</p>
+<img src="Image/t1-2.png"><br>
+<p>Detail transaksi dengan path image barang</p>
+<img src="Image/t1-3.png"><br>
+<img src="Image/t1-4.png"><br>
